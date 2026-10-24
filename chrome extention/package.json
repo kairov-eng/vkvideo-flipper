@@ -1,0 +1,17 @@
+{
+  "name": "vkvideo-flipper",
+  "version": "1.0.0",
+  "description": "VKVideo flipper — horizontal flip and OCR auto-detect for VK Video",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "tesseract.js": "^5.1.1",
+    "tesseract.js-core": "^5.1.1"
+  }
+}

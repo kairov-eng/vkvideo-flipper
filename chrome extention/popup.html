@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VKVideo flipper</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <h1>VKVideo flipper</h1>
+      <p class="lead">
+        Горизонтально отражает картинку VK Видео. Управление плеера остаётся на месте. Автоанализ
+        сам находит зеркальный текст в кадре.
+      </p>
+
+      <div class="row" data-key="enabled">
+        <span>
+          <span id="state" class="state">Отражение выключено</span>
+          <span class="sub">Ручной переворот — сразу на странице</span>
+        </span>
+        <button id="toggle" class="switch" type="button" role="switch" aria-checked="false">
+          <span class="knob"></span>
+        </button>
+      </div>
+
+      <div class="row" data-key="autoAnalyze">
+        <span>
+          <span id="auto-state" class="state">Автоанализ выключен</span>
+          <span class="sub">vkvideo / vk.com и встройка из Яндекса</span>
+        </span>
+        <button id="auto-toggle" class="switch" type="button" role="switch" aria-checked="false">
+          <span class="knob"></span>
+        </button>
+      </div>
+
+      <button id="show-analysis" class="action" type="button">Показать окно анализа</button>
+
+      <section id="decision" class="decision" hidden>
+        <div class="decision-title">Зеркалирование выполнено</div>
+        <div id="decision-time" class="decision-time"></div>
+        <img id="decision-thumb" class="decision-thumb" alt="Кадр решения" hidden />
+      </section>
+
+      <p id="shortcut" class="hint"></p>
+      <p class="hint">
+        Окно анализа на странице не открывается само — только по кнопке выше. Миниатюра решения
+        хранится в меню, пока открыт этот URL; при смене ссылки история очищается.
+      </p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
